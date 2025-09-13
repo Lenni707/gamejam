@@ -7,6 +7,8 @@ var player_inside := false
 
 var MiniGamePopup := preload("res://Scenes/mini_game_popup.tscn")
 
+signal popup_open
+
 func _ready() -> void:
 	# Start des games ist der alarm nicht sichtbar
 	sprite.visible = false
@@ -46,7 +48,7 @@ func try_solve():
 		# 1) instance popup
 		var popup = MiniGamePopup.instantiate()
 		# 2) add under UI CanvasLayer (adjust path to your actual names)
-		var ui_root: Node = get_tree().root.get_node("Main/UI")
+		var ui_root: Node = get_tree().root.get_node("game/UI")
 		ui_root.add_child(popup)
 		# 3) react to minigame finishing
 		popup.finished.connect(_on_minigame_finished)

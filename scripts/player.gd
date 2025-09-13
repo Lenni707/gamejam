@@ -7,6 +7,8 @@ func _ready() -> void:
 	add_to_group("player")
 
 func _physics_process(_delta: float) -> void:
+	
+	
 	var dir: Vector2 = Input.get_vector("left", "right", "up", "down")
 
 	# movement
@@ -24,6 +26,9 @@ func _process(delta: float) -> void:
 
 # Animationen
 func _update_animation(dir: Vector2) -> void:
+	if ui_locked:
+		return   # skip movement entirely
+	
 	if dir == Vector2.ZERO:
 		# Idle when no input
 		if anim.animation != "idle":
@@ -38,3 +43,13 @@ func _update_animation(dir: Vector2) -> void:
 			anim.flip_h = true
 		elif dir.x > 0.01:
 			anim.flip_h = false
+
+var ui_locked: bool = false
+
+func set_ui_lock(locked: bool):
+	ui_locked = locked
+	if locked:
+		velocity = Vector2.ZERO   # stop immediately
+
+func _on_popup_open() -> void:
+	set_ui_lock(true)

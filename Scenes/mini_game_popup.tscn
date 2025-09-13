@@ -17,3 +17,5 @@ offset_bottom = 316.0
 [node name="Content" type="Control" parent="MarginContainer"]
 layout_mode = 2
 script = ExtResource("2_i6w2n")
+
+[connection signal="finished" from="MarginContainer/Content" to="." method="_on_game_finished"]
