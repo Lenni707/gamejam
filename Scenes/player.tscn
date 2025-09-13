@@ -4,8 +4,8 @@
 [ext_resource type="Texture2D" uid="uid://hniwlvypdenw" path="res://Assets/player_sheet.png" id="2_cvnsp"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_cvnsp"]
-radius = 39.0
-height = 116.0
+radius = 18.0
+height = 52.0
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_6t5aa"]
 atlas = ExtResource("2_cvnsp")
@@ -52,13 +52,14 @@ animations = [{
 script = ExtResource("1_v0iea")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(1, -58)
-scale = Vector2(1, 1)
+position = Vector2(2, -20)
+rotation = 1.58504
 shape = SubResource("CapsuleShape2D_cvnsp")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(1, -57)
-scale = Vector2(0.277027, 0.277027)
+z_index = 5
+position = Vector2(3, -47)
+scale = Vector2(0.182432, 0.182432)
 sprite_frames = SubResource("SpriteFrames_vgqql")
 animation = &"run"
-frame_progress = 0.904
+frame_progress = 0.724109
