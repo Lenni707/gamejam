@@ -5,6 +5,8 @@ extends Node2D
 var active := false
 var player_inside := false
 
+var MiniGamePopup := preload("res://Scenes/mini_game_popup.tscn")
+
 func _ready() -> void:
 	# Start des games ist der alarm nicht sichtbar
 	sprite.visible = false
@@ -39,6 +41,23 @@ func _on_body_exited(body):
 # Hier ändern was passiert wenn mit alarm interagiert wird
 # Scene ändern, etc
 func try_solve():
-	print("tried solving")
 	if active and player_inside:
-		stop_alarm()
+		emit_signal("popup_open")  # optional
+		# 1) instance popup
+		var popup = MiniGamePopup.instantiate()
+		# 2) add under UI CanvasLayer (adjust path to your actual names)
+		var ui_root: Node = get_tree().root.get_node("Main/UI")
+		ui_root.add_child(popup)
+		# 3) react to minigame finishing
+		popup.finished.connect(_on_minigame_finished)
+		# 4) show it, centered & clamped
+		popup.popup_centered_clamped()
+# optional: stop alarm now (or after success)
+# stop_alarm()
+
+func _on_minigame_finished(result: Dictionary):
+		if result.success:
+			stop_alarm()
+			print("Alarm solved via minigame.")
+		else:
+			print("Minigame failed/canceled.")
