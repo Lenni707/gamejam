@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://rj4i3t6llrc0"]
+[gd_scene load_steps=0 format=3 uid="uid://rj4i3t6llrc0"]
 
 [node name="MiniGamePopup" type="PopupPanel"]
 size = Vector2i(480, 320)
