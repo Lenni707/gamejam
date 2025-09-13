@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://wflja766b8ma"]
+[gd_scene load_steps=16 format=3 uid="uid://wflja766b8ma"]
 
 [ext_resource type="Texture2D" uid="uid://dj0eqqayghy5i" path="res://Assets/get_ground.png" id="1_ebmjs"]
 [ext_resource type="Texture2D" uid="uid://cjb18px0ca4nx" path="res://Assets/free-office-pixel-art/printer.png" id="2_3dryh"]
@@ -12,6 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://c0hmfm5ec8ip" path="res://Assets/free-office-pixel-art/desk-with-pc.png" id="10_ewbju"]
 [ext_resource type="Texture2D" uid="uid://jw66bw85dyvw" path="res://Assets/free-office-pixel-art/sink.png" id="11_85qyi"]
 [ext_resource type="Texture2D" uid="uid://3fmkwba7dw5t" path="res://Assets/free-office-pixel-art/office-partitions-1.png" id="12_iivbl"]
+[ext_resource type="PackedScene" uid="uid://dugx7ujiqokry" path="res://Scenes/player.tscn" id="13_rfjv2"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qxrlw"]
 texture = ExtResource("1_ebmjs")
@@ -4234,3 +4235,11 @@ texture = ExtResource("10_ewbju")
 position = Vector2(-38, 138)
 scale = Vector2(1.28125, 1.28125)
 texture = ExtResource("3_wowpa")
+
+[node name="player2" parent="desks" instance=ExtResource("13_rfjv2")]
+position = Vector2(4, -61)
+scale = Vector2(0.471446, 0.471446)
+
+[node name="Camera2D" type="Camera2D" parent="desks/player2"]
+rotation = -0.0234571
+scale = Vector2(-0.338931, 1.29611)
