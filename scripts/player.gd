@@ -3,6 +3,9 @@ extends CharacterBody2D
 const SPEED := 250.0
 @onready var anim: AnimatedSprite2D = $AnimatedSprite2D
 
+func _ready() -> void:
+	add_to_group("player")
+
 func _physics_process(_delta: float) -> void:
 	var dir: Vector2 = Input.get_vector("left", "right", "up", "down")
 
@@ -12,8 +15,14 @@ func _physics_process(_delta: float) -> void:
 
 	# animations
 	_update_animation(dir)
+	
+# Funktion check, ob interaktion mit einem Problem ist
+func _process(delta: float) -> void:
+	if Input.is_action_just_pressed("Interagieren"):
+		for alarm in get_tree().get_nodes_in_group("alarms"):
+			alarm.try_solve()
 
-
+# Animationen
 func _update_animation(dir: Vector2) -> void:
 	if dir == Vector2.ZERO:
 		# Idle when no input
