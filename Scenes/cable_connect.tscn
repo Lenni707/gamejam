@@ -1,4 +1,4 @@
-[gd_scene load_steps=3 format=3 uid="uid://nhoiym26lbsc"]
+[gd_scene load_steps=3 format=3 uid="uid://ckpgd2hc1etka"]
 
 [ext_resource type="Script" uid="uid://drr2cpgone04y" path="res://scripts/cable_connect.gd" id="1_y1tbm"]
 [ext_resource type="Texture2D" uid="uid://b6ph842ikbenc" path="res://Assets/cable_game/Sprite-0001.png" id="2_almc4"]

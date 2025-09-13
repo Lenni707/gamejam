@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://rj4i3t6llrc0"]
 
 [ext_resource type="Script" path="res://scripts/mini_game_popup.gd" id="1_k2edx"]
-[ext_resource type="Script" path="res://Scenes/content.gd" id="2_i6w2n"]
+[ext_resource type="Script" uid="uid://dq6vt4vcp4yoi" path="res://Scenes/content.gd" id="2_i6w2n"]
 
 [node name="MiniGamePopup" type="PopupPanel"]
 size = Vector2i(480, 320)
