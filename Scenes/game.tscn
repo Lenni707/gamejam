@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=3 uid="uid://wflja766b8ma"]
+[gd_scene load_steps=37 format=3 uid="uid://wflja766b8ma"]
 
 [ext_resource type="Texture2D" uid="uid://dj0eqqayghy5i" path="res://Assets/get_ground.png" id="1_ebmjs"]
 [ext_resource type="Script" path="res://scripts/game.gd" id="1_nnt18"]
@@ -4108,7 +4108,7 @@ sources/0 = SubResource("TileSetAtlasSource_qxrlw")
 size = Vector2(670, 33)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_iivbl"]
-size = Vector2(33, 391)
+size = Vector2(33.5, 391)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ewbju"]
 size = Vector2(241, 86)
@@ -4125,6 +4125,9 @@ size = Vector2(48, 65)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mg4q0"]
 size = Vector2(48, 47)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tgy6u"]
+size = Vector2(48, 20)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vm72l"]
 size = Vector2(118, 20)
 
@@ -4136,6 +4139,20 @@ size = Vector2(192.5, 20)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_81klo"]
 size = Vector2(253, 52)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cwurv"]
+size = Vector2(67, 22)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mucmn"]
+size = Vector2(52, 22)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_8m3t6"]
+radius = 5.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ese38"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_oeip8"]
+radius = 6.0
 
 [node name="game" type="Node2D"]
 script = ExtResource("1_nnt18")
@@ -4160,7 +4177,7 @@ position = Vector2(-272.5, -12.5)
 shape = SubResource("RectangleShape2D_iivbl")
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="TileMap/Walls"]
-position = Vector2(369, -17)
+position = Vector2(368.75, -17)
 shape = SubResource("RectangleShape2D_iivbl")
 
 [node name="Wall" type="Sprite2D" parent="TileMap/Walls"]
@@ -4189,6 +4206,10 @@ shape = SubResource("RectangleShape2D_7t8sx")
 position = Vector2(136, 88.5)
 shape = SubResource("RectangleShape2D_mg4q0")
 
+[node name="CollisionShape2D10" type="CollisionShape2D" parent="TileMap/Walls"]
+position = Vector2(136, 174)
+shape = SubResource("RectangleShape2D_tgy6u")
+
 [node name="Items" type="StaticBody2D" parent="TileMap"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TileMap/Items"]
@@ -4210,6 +4231,26 @@ shape = SubResource("RectangleShape2D_81klo")
 [node name="CollisionShape2D5" type="CollisionShape2D" parent="TileMap/Items"]
 position = Vector2(-130.5, 113)
 shape = SubResource("RectangleShape2D_81klo")
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="TileMap/Items"]
+position = Vector2(195.5, 79)
+shape = SubResource("RectangleShape2D_cwurv")
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="TileMap/Items"]
+position = Vector2(325, 85)
+shape = SubResource("RectangleShape2D_mucmn")
+
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="TileMap/Items"]
+position = Vector2(174, 168)
+shape = SubResource("CircleShape2D_8m3t6")
+
+[node name="CollisionShape2D9" type="CollisionShape2D" parent="TileMap/Items"]
+position = Vector2(316, 104)
+shape = SubResource("CircleShape2D_ese38")
+
+[node name="CollisionShape2D10" type="CollisionShape2D" parent="TileMap/Items"]
+position = Vector2(341, -39)
+shape = SubResource("CircleShape2D_oeip8")
 
 [node name="Items" type="Node" parent="."]
 
@@ -4401,6 +4442,7 @@ scale = Vector2(1.26, 1.26)
 texture = ExtResource("14_1phco")
 
 [node name="player" parent="." instance=ExtResource("13_rfjv2")]
+z_index = 5
 position = Vector2(4, -61)
 scale = Vector2(0.471446, 0.471446)
 
