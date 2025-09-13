@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://nhoiym26lbsc"]
+
+[ext_resource type="Script" uid="uid://drr2cpgone04y" path="res://scripts/cable_connect.gd" id="1_y1tbm"]
+[ext_resource type="Texture2D" uid="uid://b6ph842ikbenc" path="res://Assets/cable_game/Sprite-0001.png" id="2_almc4"]
+
+[node name="cable_connect" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_y1tbm")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("2_almc4")
