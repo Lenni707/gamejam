@@ -7,7 +7,8 @@ func _ready() -> void:
 	add_to_group("player")
 
 func _physics_process(_delta: float) -> void:
-	
+	if ui_locked:
+		return
 	
 	var dir: Vector2 = Input.get_vector("left", "right", "up", "down")
 
@@ -34,7 +35,7 @@ func _update_animation(dir: Vector2) -> void:
 		if anim.animation != "idle":
 			anim.play("idle")
 	else:
-		# Running
+		# Runninges
 		if anim.animation != "run":
 			anim.play("run")
 		
@@ -53,3 +54,6 @@ func set_ui_lock(locked: bool):
 
 func _on_popup_open() -> void:
 	set_ui_lock(true)
+	
+func _on_mini_game_popup_finished(result: Dictionary) -> void:
+	set_ui_lock(false)

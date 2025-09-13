@@ -50,9 +50,14 @@ func try_solve():
 		# 2) add under UI CanvasLayer (adjust path to your actual names)
 		var ui_root: Node = get_tree().root.get_node("game/UI")
 		ui_root.add_child(popup)
-		# 3) react to minigame finishing
+		# Connect to Alarm handler
 		popup.finished.connect(_on_minigame_finished)
-		# 4) show it, centered & clamped
+
+		# Connect to Player unlock
+		var player := get_tree().get_first_node_in_group("player")
+		if player:
+			popup.finished.connect(player._on_mini_game_popup_finished)
+
 		popup.popup_centered_clamped()
 # optional: stop alarm now (or after success)
 # stop_alarm()
@@ -63,3 +68,4 @@ func _on_minigame_finished(result: Dictionary):
 			print("Alarm solved via minigame.")
 		else:
 			print("Minigame failed/canceled.")
+			
