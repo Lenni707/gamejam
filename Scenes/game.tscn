@@ -12,7 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://c0hmfm5ec8ip" path="res://Assets/free-office-pixel-art/desk-with-pc.png" id="10_ewbju"]
 [ext_resource type="Texture2D" uid="uid://jw66bw85dyvw" path="res://Assets/free-office-pixel-art/sink.png" id="11_85qyi"]
 [ext_resource type="Texture2D" uid="uid://3fmkwba7dw5t" path="res://Assets/free-office-pixel-art/office-partitions-1.png" id="12_iivbl"]
-[ext_resource type="PackedScene" path="res://Scenes/player.tscn" id="13_rfjv2"]
+[ext_resource type="PackedScene" uid="uid://dugx7ujiqokry" path="res://Scenes/player.tscn" id="13_rfjv2"]
 [ext_resource type="Texture2D" uid="uid://cx2ddmusmeskd" path="res://Assets/free-office-pixel-art/Chair.png" id="14_1phco"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qxrlw"]

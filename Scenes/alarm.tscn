@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://ttbduj02m7tv"]
+
+[ext_resource type="Script" uid="uid://btaoqjwcmftcq" path="res://scripts/alarm.gd" id="1_ck6sr"]
+
+[node name="Alarm" type="Node2D"]
+script = ExtResource("1_ck6sr")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.075, 0.075)
+
+[node name="AudioStreamPlayer2D-nohc machen" type="AudioStreamPlayer2D" parent="."]
