@@ -1,5 +1,7 @@
 extends Node2D
 
+@onready var counter: Label = $Counter
+
 #Alarm control
 var alarms = {}
 
@@ -27,6 +29,9 @@ func _ready() -> void:
 	# spawns the alarms
 	#for i in alarms.keys():
 		#trigger_problem(i)
+
+func _process(delta: float) -> void:
+	counter.text = "Active errors: " + str(get_ative_alarms().size()) + "/7"
 		
 func trigger_problem(name):
 	if name in alarms:
@@ -36,6 +41,13 @@ func get_free_alarms():
 	var free_alarms = []
 	for alarm in alarms.values():
 		if not alarm.active:
+			free_alarms.append(alarm)
+	return free_alarms
+	
+func get_ative_alarms():
+	var free_alarms = []
+	for alarm in alarms.values():
+		if alarm.active:
 			free_alarms.append(alarm)
 	return free_alarms
 
