@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://d1nevuhfsbomg"]
+[gd_scene load_steps=4 format=3 uid="uid://d1nevuhfsbomg"]
 
 [ext_resource type="FontFile" uid="uid://cykpy8xitxqbn" path="res://Assets/fonts/PixelOperator8-Bold.ttf" id="1_8hps1"]
 [ext_resource type="Script" uid="uid://b7jajob6jqb3j" path="res://scripts/death_screen.gd" id="1_rwas2"]
+[ext_resource type="AudioStream" uid="uid://d27mor8vi08cg" path="res://Sound/death.mp3" id="3_tseak"]
 
 [node name="death_screen" type="Control"]
 layout_mode = 3
@@ -81,3 +82,7 @@ scale = Vector2(1.74, 1.74)
 theme_override_colors/font_color = Color(1, 0.956863, 1, 1)
 theme_override_fonts/font = ExtResource("1_8hps1")
 text = "Press space to try again"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_tseak")
+autoplay = true

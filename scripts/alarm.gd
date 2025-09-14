@@ -19,12 +19,12 @@ func _ready() -> void:
 	if starts_active:
 		trigger_alarm()
 	print("[Alarm:", name, "] sprite node =", sprite)
-
+	
 func trigger_alarm():
 	if !active:
 		active = true
 		sprite.visible = true
-
+		$"AudioStreamPlayer2D".play()
 func stop_alarm():
 	print("[Alarm:", name, "] stop_alarm called. active=", active)
 	

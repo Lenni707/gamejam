@@ -29,13 +29,13 @@ func _ready() -> void:
 	# spawns the alarms
 	#for i in alarms.keys():
 		#trigger_problem(i)
-
+	trigger_random_alarm_if_free()
 func _process(delta: float) -> void:
 	counter.text = "Active errors: " + str(get_active_alarms().size()) + "/7"
 	if get_active_alarms().size() >= 7:
 		GameState.last_time = stopclock.text
 		get_tree().change_scene_to_file("res://Scenes/death_screen.tscn")
-		
+	
 func trigger_problem(name):
 	if name in alarms:
 		alarms[name].trigger_alarm()
@@ -63,8 +63,8 @@ func trigger_random_alarm_if_free():
 
 
 @export var check_interval: float = 3.0
-@export var base_prob: float = 0.2
-@export var grow_rate: float = 0.009
+@export var base_prob: float = 0.23
+@export var grow_rate: float = 0.0065
 @export var max_prob: float = 1.0
 
 var elapsed_time := 0.0
@@ -79,6 +79,8 @@ func _on_check_timer_timeout() -> void:
 	print(p)
 	if randf() < p:
 		trigger_random_alarm_if_free()
+	if p > 0.7:
+		grow_rate = 0.005
 
 # Escape menu
 @export var escape_menu_scene: PackedScene
