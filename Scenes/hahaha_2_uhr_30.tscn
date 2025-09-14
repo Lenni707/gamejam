@@ -1,8 +1,14 @@
-[gd_scene load_steps=2 format=3 uid="uid://clqiursun1ihv"]
+[gd_scene load_steps=8 format=3 uid="uid://clqiursun1ihv"]
 
 [ext_resource type="Script" uid="uid://831d42upo1gs" path="res://scripts/hahaha_2_uhr_30.gd" id="1_n7eh8"]
+[ext_resource type="Texture2D" uid="uid://bjbg5t2xckes5" path="res://Assets/spam_game/background.png" id="2_8hv87"]
+[ext_resource type="Texture2D" uid="uid://cnpe7f14gfpco" path="res://Assets/spam_game/spacebar.png" id="3_5eycb"]
+[ext_resource type="FontFile" uid="uid://cykpy8xitxqbn" path="res://Assets/fonts/PixelOperator8-Bold.ttf" id="3_kracc"]
+[ext_resource type="Texture2D" uid="uid://drllxli6xl6t8" path="res://Assets/spam_game/spacebar_upcharger.png" id="4_50ws1"]
+[ext_resource type="Texture2D" uid="uid://c6rlngc5xdbfp" path="res://Assets/spam_game/spacebar_upcharger_outline.png" id="5_kracc"]
+[ext_resource type="Texture2D" uid="uid://ch1khmdrq1o1k" path="res://Assets/spam_game/spacebar_red.png" id="6_50ws1"]
 
-[node name="hahaha_2uhr30" type="Control"]
+[node name="spamming_game" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -10,3 +16,45 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_n7eh8")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("2_8hv87")
+
+[node name="Label" type="Label" parent="TextureRect"]
+layout_mode = 0
+offset_left = 11.0
+offset_top = 50.0
+offset_right = 473.0
+offset_bottom = 69.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_kracc")
+text = "Press Spacebar to fill up the bar"
+
+[node name="space" type="TextureButton" parent="TextureRect"]
+layout_mode = 0
+offset_left = 126.0
+offset_top = 205.0
+offset_right = 458.0
+offset_bottom = 317.0
+scale = Vector2(0.651491, 0.651491)
+texture_normal = ExtResource("3_5eycb")
+texture_pressed = ExtResource("6_50ws1")
+
+[node name="TextureRect2" type="TextureRect" parent="TextureRect"]
+layout_mode = 0
+offset_left = 51.0
+offset_top = 108.0
+offset_right = 429.0
+offset_bottom = 182.0
+texture = ExtResource("4_50ws1")
+
+[node name="TextureRect" type="TextureRect" parent="TextureRect"]
+layout_mode = 0
+offset_left = 44.0
+offset_top = 98.0
+offset_right = 430.0
+offset_bottom = 183.0
+texture = ExtResource("5_kracc")

@@ -17,8 +17,8 @@
 [ext_resource type="Texture2D" uid="uid://cx2ddmusmeskd" path="res://Assets/free-office-pixel-art/Chair.png" id="14_1phco"]
 [ext_resource type="PackedScene" uid="uid://ttbduj02m7tv" path="res://Scenes/alarm.tscn" id="15_nb51f"]
 [ext_resource type="Texture2D" uid="uid://dfboce71sh16s" path="res://Assets/free-office-pixel-art/wall.png" id="17_ewbju"]
-[ext_resource type="PackedScene" uid="uid://na7xdq1mxmin" path="res://Scenes/spam_game.tscn" id="19_iivbl"]
-[ext_resource type="PackedScene" uid="uid://cl2qe45x22153" path="res://Scenes/cable_connect.tscn" id="20_7nbq1"]
+[ext_resource type="PackedScene" uid="uid://cl2qe45x22153" path="res://Scenes/cable_connect.tscn" id="19_iivbl"]
+[ext_resource type="PackedScene" uid="uid://clqiursun1ihv" path="res://Scenes/hahaha_2_uhr_30.tscn" id="20_7nbq1"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qxrlw"]
 texture = ExtResource("1_ebmjs")
@@ -4457,17 +4457,26 @@ zoom = Vector2(1.49, 1.49)
 
 [node name="Alarm2" parent="alarms" instance=ExtResource("15_nb51f")]
 position = Vector2(314, 88)
-game_scene = ExtResource("19_iivbl")
+game_scene = ExtResource("20_7nbq1")
 
 [node name="Alarm3" parent="alarms" instance=ExtResource("15_nb51f")]
 position = Vector2(-32, 104)
-game_scene = ExtResource("20_7nbq1")
+game_scene = ExtResource("19_iivbl")
 
 [node name="UI" type="CanvasLayer" parent="."]
 
 [node name="CenterContainer" type="CenterContainer" parent="UI"]
-offset_right = 40.0
-offset_bottom = 40.0
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [connection signal="popup_open" from="alarms/Alarm2" to="player" method="_on_popup_open"]
 [connection signal="popup_open" from="alarms/Alarm3" to="player" method="_on_popup_open"]
