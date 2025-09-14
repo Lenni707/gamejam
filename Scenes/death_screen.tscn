@@ -17,6 +17,7 @@ offset_bottom = 665.0
 color = Color(0, 0, 0, 1)
 
 [node name="Label" type="Label" parent="."]
+layout_mode = 0
 offset_left = 226.0
 offset_top = 175.0
 offset_right = 622.0
@@ -27,6 +28,7 @@ theme_override_fonts/font = ExtResource("1_8hps1")
 text = "You couldnt save the office."
 
 [node name="Label2" type="Label" parent="."]
+layout_mode = 0
 offset_left = 260.0
 offset_top = 238.0
 offset_right = 656.0
@@ -37,6 +39,7 @@ theme_override_fonts/font = ExtResource("1_8hps1")
 text = "But still kept it going for:"
 
 [node name="Label3" type="Label" parent="."]
+layout_mode = 0
 offset_left = 485.0
 offset_top = 304.0
 offset_right = 881.0
@@ -47,6 +50,7 @@ theme_override_fonts/font = ExtResource("1_8hps1")
 text = "xx.min"
 
 [node name="Label4" type="Label" parent="."]
+layout_mode = 0
 offset_left = 356.0
 offset_top = 402.0
 offset_right = 752.0
@@ -57,6 +61,7 @@ theme_override_fonts/font = ExtResource("1_8hps1")
 text = "thats impressive..."
 
 [node name="Label5" type="Label" parent="."]
+layout_mode = 0
 offset_left = 499.0
 offset_top = 458.0
 offset_right = 599.0
@@ -67,6 +72,7 @@ theme_override_fonts/font = ExtResource("1_8hps1")
 text = "i guess"
 
 [node name="Label6" type="Label" parent="."]
+layout_mode = 0
 offset_left = 601.0
 offset_top = 605.0
 offset_right = 945.0

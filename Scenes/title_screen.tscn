@@ -48,6 +48,17 @@ theme_override_colors/font_color = Color(1, 0.956863, 1, 1)
 theme_override_fonts/font = ExtResource("4_55kwv")
 text = "THE ERRORS OF THE OFFICE"
 
+[node name="Label2" type="Label" parent="VBoxContainer/TextureButton"]
+layout_mode = 0
+offset_left = -7.72556
+offset_top = -26.6095
+offset_right = 272.274
+offset_bottom = -7.60954
+scale = Vector2(1.115, 1.115)
+theme_override_colors/font_color = Color(1, 0.956863, 1, 1)
+theme_override_fonts/font = ExtResource("4_55kwv")
+text = "made by okoloki.com"
+
 [node name="TextureButton2" type="TextureButton" parent="VBoxContainer"]
 layout_mode = 2
 texture_normal = ExtResource("4_twnyg")
