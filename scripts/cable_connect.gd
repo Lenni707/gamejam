@@ -14,7 +14,7 @@ var pairs = {
 
 func _ready() -> void:
 	set_process_unhandled_input(true)
-	custom_minimum_size = Vector2(240, 100)  # so it's visible in the popup
+	custom_minimum_size = Vector2(400, 300)  # so it's visible in the popup
 	
 	add_picture("res://Assets/cable_game/USB-TEXT.png", 25.0, 235.0, 0.39, 0.39, "USB-TEXT")
 	add_picture("res://Assets/cable_game/HDMI-Text.png", 150.0, 227.0, 0.42, 0.42, "HDMI-TEXT")

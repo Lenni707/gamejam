@@ -4461,7 +4461,7 @@ position = Vector2(314, 88)
 game_scene = ExtResource("20_7nbq1")
 
 [node name="Alarm3" parent="alarms" instance=ExtResource("15_nb51f")]
-position = Vector2(-32, 104)
+position = Vector2(-17, 114)
 game_scene = ExtResource("19_iivbl")
 
 [node name="Alarm" parent="alarms" instance=ExtResource("15_nb51f")]

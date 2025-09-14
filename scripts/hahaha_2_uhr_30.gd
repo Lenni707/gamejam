@@ -6,7 +6,7 @@ signal finished(success: bool)
 @onready var space: TextureButton                   = $TextureRect/space
 
 var progress := 0.0          # 0..1
-var increment := 0.07  # how much each press adds
+var increment := 0.08  # how much each press adds
 var drain_per_sec := 0.2    # how fast it drains
 var fired := false           # to emit finished once
 
