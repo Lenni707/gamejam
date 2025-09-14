@@ -28,10 +28,10 @@ func start(config := {}):
 	# init state from config if needed
 	queue_redraw()
 
-func _unhandled_input(event):
-	if event.is_action_pressed("Interagieren"):
-		emit_signal("finished", true)  # or handle logic then decide
-		# else queue_redraw()
+#func _unhandled_input(event):
+	#if event.is_action_pressed("Interagieren"):
+		#emit_signal("finished", true)  # or handle logic then decide
+		## else queue_redraw()
 
 func add_picture(path: String, x: float, y: float, scale1: float, scal2: float, name: String):
 	var img = TextureButton.new()

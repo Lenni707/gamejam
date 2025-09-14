@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://bqr7axclq26kd" path="res://Assets/QUIT.png" id="5_muhog"]
 
 [node name="TitleScreen" type="Control"]
-process_mode = 1
+z_index = 200
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
