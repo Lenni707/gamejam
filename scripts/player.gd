@@ -38,14 +38,18 @@ func _update_animation(dir: Vector2) -> void:
 			anim.play("idle")
 	else:
 		# Runninges
-		if anim.animation != "run":
-			anim.play("run")
 		
 		# Flip when moving left
-		if dir.x < -0.01:
+		if dir.x < -0.01 && not dir.y < -0.01:
+			anim.play("run")
 			anim.flip_h = true
-		elif dir.x > 0.01:
+		elif dir.x > 0.01 && not dir.y < -0.01:
+			anim.play("run")
 			anim.flip_h = false
+		if dir.y < -0.01:
+			anim.play("run_up")
+		
+		
 
 var ui_locked: bool = false
 
