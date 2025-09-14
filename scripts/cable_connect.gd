@@ -1,4 +1,5 @@
 extends Control
+signal finished(success: bool)
 
 var first_selected: TextureButton = null
 var pairs = {
@@ -9,6 +10,7 @@ var pairs = {
 	"LAN-PORT": "LAN-TEXT",
 	"LAN-TEXT": "LAN-PORT",
 }
+
 
 func _ready() -> void:
 	set_process_unhandled_input(true)
