@@ -19,11 +19,13 @@ func _ready() -> void:
 		"Computer9":$alarms/Computer10,
 		"Computer10":$alarms/Computer11,
 		"Computer11":$alarms/Computer12,
-		
+		"Printer1": $alarms/Printer1,
+		"Printer2": $alarms/Printer3,
+		"Printer3": $alarms/Printer4,
+		"Printer4": $alarms/Printer2,
 	}
 	# spawns the alarms
-	for i in alarms.keys():
-		trigger_problem(i)
+	
 		
 func trigger_problem(name):
 	if name in alarms:
