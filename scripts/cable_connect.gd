@@ -61,3 +61,13 @@ func _on_item_clicked(item: TextureButton):
 			print("falsch")
 			first_selected.modulate = Color(1, 1, 1)  # Reset Farbe
 		first_selected = null
+	check_if_finished()
+
+func check_if_finished():
+	for child in get_children():
+		if child is TextureButton and not child.disabled:
+			# Es gibt noch Buttons, die nicht richtig verbunden wurden
+			return false
+	# Alle Buttons sind deaktiviert → fertig
+	emit_signal("finished", true)
+	print("true")
