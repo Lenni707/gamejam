@@ -1,6 +1,9 @@
-[gd_scene load_steps=2 format=3 uid="uid://na7xdq1mxmin"]
+[gd_scene load_steps=5 format=3 uid="uid://na7xdq1mxmin"]
 
 [ext_resource type="Script" uid="uid://dx1hmsr7emit3" path="res://scripts/spam_game.gd" id="1_tpvkr"]
+[ext_resource type="Texture2D" uid="uid://bh2fwpg2h8lf5" path="res://Assets/timing_game/bg_keys.png" id="2_g73hy"]
+[ext_resource type="Texture2D" uid="uid://fgge63xietuy" path="res://Assets/timing_game/frame_keys.png" id="3_shfu1"]
+[ext_resource type="FontFile" uid="uid://cdvtpcgguj3k3" path="res://Assets/fonts/PixelOperator8.ttf" id="4_g73hy"]
 
 [node name="Content" type="Control"]
 layout_mode = 3
@@ -10,3 +13,54 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_tpvkr")
+
+[node name="Background" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("2_g73hy")
+
+[node name="Hitframe" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 84.0
+offset_top = 126.0
+offset_right = 210.0
+offset_bottom = 251.0
+scale = Vector2(0.701548, 0.701548)
+texture = ExtResource("3_shfu1")
+
+[node name="Notes" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="SpawnPoint" type="Control" parent="."]
+anchors_preset = 0
+offset_left = 392.0
+offset_top = 129.0
+offset_right = 432.0
+offset_bottom = 169.0
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="Counter" type="Label" parent="."]
+layout_mode = 0
+offset_left = 206.0
+offset_top = 264.0
+offset_right = 246.0
+offset_bottom = 287.0
+scale = Vector2(1.60201, 1.53793)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_g73hy")
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 48.0
+offset_right = 572.0
+offset_bottom = 97.0
+scale = Vector2(0.830462, 0.830462)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_g73hy")
+text = "     Press the corresponding button 
+when it hits the frame to earn points"

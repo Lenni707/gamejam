@@ -4,14 +4,14 @@ extends Node2D
 var alarms = {}
 
 func _ready() -> void:
-	# TIMER
 	check_timer.wait_time = check_interval
 	check_timer.start()
-	# Struct aus Alarms, weitere Alarme hier einfügen
+	
 	alarms = {
 		"Computer1": $alarms/Computer1,
+		"Computer2": $alarms/Alarm
 	}
-	# Temporär spawnt alle alarme
+	# spawns the alarms
 	for i in alarms.keys():
 		trigger_problem(i)
 func trigger_problem(name):
@@ -46,7 +46,7 @@ var elapsed_time := 0.0
 func _on_check_timer_timeout() -> void:
 	elapsed_time += check_interval
 
-#Wahrscheinlichkeit steigt linear an
+
 	var  p = min(base_prob + grow_rate * elapsed_time, max_prob)
 	print(p)
 	if randf() > p:
