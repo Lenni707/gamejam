@@ -51,3 +51,30 @@ func _on_check_timer_timeout() -> void:
 	print(p)
 	if randf() > p:
 		trigger_random_alarm_if_free()
+		
+# Escape menu
+@export var escape_menu_scene: PackedScene
+var escape_menu_instance: Control = null
+var paused := false
+
+func _unhandled_input(event):
+	if event.is_action_pressed("ui_cancel"):
+		if not paused:
+			show_pause_menu()
+		else:
+			hide_pause_menu()
+
+func show_pause_menu():
+	if escape_menu_scene:
+		escape_menu_instance = escape_menu_scene.instantiate()
+		get_tree().root.add_child(escape_menu_instance)  # Overlay 
+		paused = true
+		get_tree().paused = true  # Spiel pausieren
+
+func hide_pause_menu():
+	if escape_menu_instance:
+		escape_menu_instance.queue_free()
+		escape_menu_instance = null
+	paused = false
+	# Spiel startet
+	get_tree().paused = false

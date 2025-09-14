@@ -6,7 +6,7 @@
 [ext_resource type="FontFile" uid="uid://cykpy8xitxqbn" path="res://Assets/fonts/PixelOperator8-Bold.ttf" id="4_55kwv"]
 [ext_resource type="Texture2D" uid="uid://bqr7axclq26kd" path="res://Assets/QUIT.png" id="4_twnyg"]
 
-[node name="TitleScreen" type="Control"]
+[node name="TitleScreen2" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -38,10 +38,11 @@ layout_mode = 2
 texture_normal = ExtResource("2_p3fck")
 
 [node name="Label" type="Label" parent="VBoxContainer/TextureButton"]
-offset_left = -205.15
-offset_top = -45.4936
-offset_right = 288.85
-offset_bottom = -26.4936
+layout_mode = 0
+offset_left = -202.575
+offset_top = -79.8284
+offset_right = 291.425
+offset_bottom = -60.8284
 scale = Vector2(2.015, 2.015)
 theme_override_colors/font_color = Color(1, 0.956863, 1, 1)
 theme_override_fonts/font = ExtResource("4_55kwv")
