@@ -10,7 +10,8 @@ func _ready() -> void:
 	# Struct aus Alarms, weitere Alarme hier einfügen
 	alarms = {
 		"Computer2": $alarms/Alarm2,
-		"Computer3": $alarms/Alarm3
+		"Computer3": $alarms/Alarm3,
+		"Computer1": $alarms/Alarm,
 	}
 	# Temporär spawnt alle alarme
 	for i in alarms.keys():

@@ -1,8 +1,10 @@
 extends Control
+signal finished(success: bool)
 
-@onready var paper1: Sprite2D = $Sprite2D
-@onready var paper2: Sprite2D = $Sprite2D2
+func _ready():
+	set_process_unhandled_input(true)
+	custom_minimum_size = Vector2(400, 300)  # so it's visible in the popup
 
-
-func _process(delta: float) -> void:
-	
+func start(config := {}):
+	# init state from config if needed
+	queue_redraw()

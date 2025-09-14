@@ -1,4 +1,4 @@
-[gd_scene load_steps=39 format=3 uid="uid://wflja766b8ma"]
+[gd_scene load_steps=40 format=3 uid="uid://wflja766b8ma"]
 
 [ext_resource type="Texture2D" uid="uid://dj0eqqayghy5i" path="res://Assets/get_ground.png" id="1_ebmjs"]
 [ext_resource type="Script" uid="uid://bhajgj8lq0ldn" path="res://scripts/game.gd" id="1_nnt18"]
@@ -19,6 +19,7 @@
 [ext_resource type="Texture2D" uid="uid://dfboce71sh16s" path="res://Assets/free-office-pixel-art/wall.png" id="17_ewbju"]
 [ext_resource type="PackedScene" uid="uid://cl2qe45x22153" path="res://Scenes/cable_connect.tscn" id="19_iivbl"]
 [ext_resource type="PackedScene" uid="uid://clqiursun1ihv" path="res://Scenes/hahaha_2_uhr_30.tscn" id="20_7nbq1"]
+[ext_resource type="PackedScene" uid="uid://bstkxj02q2rhq" path="res://Scenes/printer_paper_noo.tscn" id="20_exi56"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qxrlw"]
 texture = ExtResource("1_ebmjs")
@@ -4462,6 +4463,10 @@ game_scene = ExtResource("20_7nbq1")
 [node name="Alarm3" parent="alarms" instance=ExtResource("15_nb51f")]
 position = Vector2(-32, 104)
 game_scene = ExtResource("19_iivbl")
+
+[node name="Alarm" parent="alarms" instance=ExtResource("15_nb51f")]
+position = Vector2(-140, 16)
+game_scene = ExtResource("20_exi56")
 
 [node name="UI" type="CanvasLayer" parent="."]
 

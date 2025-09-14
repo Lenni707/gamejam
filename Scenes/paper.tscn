@@ -1,0 +1,21 @@
+[gd_scene load_steps=5 format=3 uid="uid://d0mcduflah31a"]
+
+[ext_resource type="Texture2D" uid="uid://bew1ygtuibyq2" path="res://Assets/printer_game/PAPER-1.png" id="1_thabk"]
+[ext_resource type="Script" uid="uid://bw0rscr0hojru" path="res://scripts/paper.gd" id="2_c7gsp"]
+
+[sub_resource type="GDScript" id="GDScript_c7gsp"]
+script/source = "extends Area2D
+"
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_c7gsp"]
+radius = 19.0263
+
+[node name="paper" type="Sprite2D"]
+texture = ExtResource("1_thabk")
+script = ExtResource("2_c7gsp")
+
+[node name="Area2D" type="Area2D" parent="."]
+script = SubResource("GDScript_c7gsp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_c7gsp")
