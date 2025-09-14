@@ -13,7 +13,7 @@ script = ExtResource("1_bn3ck")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 0
-offset_right = 1241.0
+offset_right = 1723.0
 offset_bottom = 660.0
 color = Color(0, 0, 0, 1)
 
