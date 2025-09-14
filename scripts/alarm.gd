@@ -24,6 +24,8 @@ func trigger_alarm():
 	if !active:
 		active = true
 		sprite.visible = true
+	else:
+		return false
 
 func stop_alarm():
 	print("[Alarm:", name, "] stop_alarm called. active=", active)
