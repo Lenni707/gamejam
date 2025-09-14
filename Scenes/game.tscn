@@ -4478,5 +4478,8 @@ offset_bottom = 20.0
 grow_horizontal = 2
 grow_vertical = 2
 
+[node name="CheckTimer" type="Timer" parent="."]
+
 [connection signal="popup_open" from="alarms/Alarm2" to="player" method="_on_popup_open"]
 [connection signal="popup_open" from="alarms/Alarm3" to="player" method="_on_popup_open"]
+[connection signal="timeout" from="CheckTimer" to="." method="_on_check_timer_timeout"]
