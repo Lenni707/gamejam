@@ -1,6 +1,8 @@
 extends CharacterBody2D
 
 const SPEED := 250.0
+var current_alarm: Node = null
+
 @onready var anim: AnimatedSprite2D = $AnimatedSprite2D
 
 func _ready() -> void:
