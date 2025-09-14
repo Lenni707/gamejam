@@ -19,3 +19,5 @@ script = SubResource("GDScript_c7gsp")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource("CircleShape2D_c7gsp")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
