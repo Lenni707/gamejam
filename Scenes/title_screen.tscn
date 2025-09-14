@@ -39,10 +39,10 @@ texture_normal = ExtResource("2_p3fck")
 
 [node name="Label" type="Label" parent="VBoxContainer/TextureButton"]
 layout_mode = 0
-offset_left = -202.575
-offset_top = -79.8284
-offset_right = 291.425
-offset_bottom = -60.8284
+offset_left = -203.0
+offset_top = -80.0
+offset_right = 145.0
+offset_bottom = -61.0
 scale = Vector2(2.015, 2.015)
 theme_override_colors/font_color = Color(1, 0.956863, 1, 1)
 theme_override_fonts/font = ExtResource("4_55kwv")

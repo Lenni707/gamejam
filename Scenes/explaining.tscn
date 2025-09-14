@@ -1,0 +1,71 @@
+[gd_scene load_steps=3 format=3 uid="uid://bvmfcr632kxoy"]
+
+[ext_resource type="FontFile" uid="uid://cykpy8xitxqbn" path="res://Assets/fonts/PixelOperator8-Bold.ttf" id="1_ep4ju"]
+[ext_resource type="Texture2D" uid="uid://dilgb5kpsc3ny" path="res://Assets/free-office-pixel-art/alarm.png" id="2_ut8do"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 1241.0
+offset_bottom = 660.0
+color = Color(0, 0, 0, 1)
+
+[node name="Label" type="Label" parent="."]
+offset_left = 263.0
+offset_top = 53.0
+offset_right = 611.0
+offset_bottom = 72.0
+scale = Vector2(2.015, 2.015)
+theme_override_colors/font_color = Color(1, 0.956863, 1, 1)
+theme_override_fonts/font = ExtResource("1_ep4ju")
+text = "THE ERRORS OF THE OFFICE"
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 275.0
+offset_top = 219.0
+offset_right = 663.0
+offset_bottom = 238.0
+scale = Vector2(1.76, 1.76)
+theme_override_colors/font_color = Color(1, 0.956863, 1, 1)
+theme_override_fonts/font = ExtResource("1_ep4ju")
+text = "You are alone at the office."
+
+[node name="Label3" type="Label" parent="."]
+offset_left = 285.0
+offset_top = 306.0
+offset_right = 673.0
+offset_bottom = 325.0
+scale = Vector2(1.76, 1.76)
+theme_override_colors/font_color = Color(1, 0.956863, 1, 1)
+theme_override_fonts/font = ExtResource("1_ep4ju")
+text = "You have to keep in intact."
+
+[node name="Label4" type="Label" parent="."]
+offset_left = 249.0
+offset_top = 389.0
+offset_right = 675.0
+offset_bottom = 408.0
+scale = Vector2(1.76, 1.76)
+theme_override_colors/font_color = Color(1, 0.956863, 1, 1)
+theme_override_fonts/font = ExtResource("1_ep4ju")
+text = "Watch out for alarms, such as:"
+
+[node name="Label5" type="Label" parent="."]
+offset_left = 646.0
+offset_top = 607.0
+offset_right = 1072.0
+offset_bottom = 626.0
+scale = Vector2(1.76, 1.76)
+theme_override_colors/font_color = Color(1, 0.956863, 1, 1)
+theme_override_fonts/font = ExtResource("1_ep4ju")
+text = "Press space to continue"
+
+[node name="Alarm" type="Sprite2D" parent="."]
+position = Vector2(607, 526)
+scale = Vector2(0.54, 0.54)
+texture = ExtResource("2_ut8do")
