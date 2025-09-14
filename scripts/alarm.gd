@@ -45,6 +45,7 @@ func _on_body_exited(body):
 func try_solve():
 	if active and player_inside and game_scene:
 		print("yes")
+		active = false
 		emit_signal("popup_open")
 		
 		var game := game_scene.instantiate()
