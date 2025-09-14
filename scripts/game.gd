@@ -2,6 +2,7 @@ extends Node2D
 
 @onready var counter: Label = $Counter
 
+
 #Alarm control
 var alarms = {}
 
@@ -30,6 +31,8 @@ func _ready() -> void:
 
 func _process(delta: float) -> void:
 	counter.text = "Active errors: " + str(get_ative_alarms().size()) + "/7"
+	if get_ative_alarms().size() > 7:
+		get_tree().change_scene_to_file("res://Scenes/death_screen.tscn")
 		
 func trigger_problem(name):
 	if name in alarms:
@@ -72,7 +75,7 @@ func _on_check_timer_timeout() -> void:
 
 	var  p = min(base_prob + grow_rate * elapsed_time, max_prob)
 	print(p)
-	if randf() > p:
+	if randf() < p:
 		trigger_random_alarm_if_free()
 
 # Escape menu
@@ -101,3 +104,7 @@ var paused := false
 	#paused = false
 	## Spiel startet
 	#get_tree().paused = false
+
+
+func _on_time(time: String) -> void:
+	pass # Replace with function body.
