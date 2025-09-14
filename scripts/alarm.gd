@@ -7,7 +7,7 @@ var current_game: Node = null
 
 @export var starts_active := false
 @export var ui_node_path: NodePath = ^"game/UI"
-@export var game_scene: PackedScene   # set per alarm in the editor
+@export var game_scenes: Array[PackedScene] = []  # set per alarm in the editor
 
 signal popup_open
 
@@ -43,12 +43,14 @@ func _on_body_exited(body):
 		body.current_alarm = null
 
 func try_solve():
-	if active and player_inside and game_scene:
+	if active and player_inside and game_scenes.size() > 0:
 		print("yes")
 		active = false
 		emit_signal("popup_open")
 		
-		var game := game_scene.instantiate()
+		var idx = randi() % game_scenes.size()
+		var chosen_scene = game_scenes[idx]
+		var game := chosen_scene.instantiate()
 		current_game = game
 		var ui_root: Node = get_tree().root.get_node("game/UI")
 		

@@ -9,9 +9,7 @@ func _ready() -> void:
 	check_timer.start()
 	# Struct aus Alarms, weitere Alarme hier einfügen
 	alarms = {
-		"Computer2": $alarms/Alarm2,
-		"Computer3": $alarms/Alarm3,
-		"Computer1": $alarms/Alarm,
+		"Computer1": $alarms/Computer1,
 	}
 	# Temporär spawnt alle alarme
 	for i in alarms.keys():
