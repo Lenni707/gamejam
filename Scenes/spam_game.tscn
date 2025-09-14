@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://na7xdq1mxmin"]
 
-[ext_resource type="Script" uid="uid://dx1hmsr7emit3" path="res://Scenes/spam_game.gd" id="1_tpvkr"]
+[ext_resource type="Script" uid="uid://dx1hmsr7emit3" path="res://scripts/spam_game.gd" id="1_tpvkr"]
 
 [node name="Content" type="Control"]
 layout_mode = 3

@@ -8,7 +8,6 @@ func _ready() -> void:
 	# Struct aus Alarms, weitere Alarme hier einfügen
 	
 	alarms = {
-		"Computer1": $alarms/Alarm,
 		"Computer2": $alarms/Alarm2,
 		"Computer3": $alarms/Alarm3
 	}

@@ -1,4 +1,4 @@
-[gd_scene load_steps=40 format=3 uid="uid://wflja766b8ma"]
+[gd_scene load_steps=39 format=3 uid="uid://wflja766b8ma"]
 
 [ext_resource type="Texture2D" uid="uid://dj0eqqayghy5i" path="res://Assets/get_ground.png" id="1_ebmjs"]
 [ext_resource type="Script" uid="uid://bhajgj8lq0ldn" path="res://scripts/game.gd" id="1_nnt18"]
@@ -17,9 +17,8 @@
 [ext_resource type="Texture2D" uid="uid://cx2ddmusmeskd" path="res://Assets/free-office-pixel-art/Chair.png" id="14_1phco"]
 [ext_resource type="PackedScene" uid="uid://ttbduj02m7tv" path="res://Scenes/alarm.tscn" id="15_nb51f"]
 [ext_resource type="Texture2D" uid="uid://dfboce71sh16s" path="res://Assets/free-office-pixel-art/wall.png" id="17_ewbju"]
-[ext_resource type="PackedScene" uid="uid://rj4i3t6llrc0" path="res://Scenes/first_game.tscn" id="18_85qyi"]
 [ext_resource type="PackedScene" uid="uid://na7xdq1mxmin" path="res://Scenes/spam_game.tscn" id="19_iivbl"]
-[ext_resource type="PackedScene" uid="uid://clqiursun1ihv" path="res://Scenes/hahaha_2_uhr_30.tscn" id="20_7nbq1"]
+[ext_resource type="PackedScene" uid="uid://cl2qe45x22153" path="res://Scenes/cable_connect.tscn" id="20_7nbq1"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qxrlw"]
 texture = ExtResource("1_ebmjs")
@@ -4456,10 +4455,6 @@ zoom = Vector2(1.49, 1.49)
 
 [node name="alarms" type="Node" parent="."]
 
-[node name="Alarm" parent="alarms" instance=ExtResource("15_nb51f")]
-position = Vector2(-136, -95)
-game_scene = ExtResource("18_85qyi")
-
 [node name="Alarm2" parent="alarms" instance=ExtResource("15_nb51f")]
 position = Vector2(314, 88)
 game_scene = ExtResource("19_iivbl")
@@ -4474,6 +4469,5 @@ game_scene = ExtResource("20_7nbq1")
 offset_right = 40.0
 offset_bottom = 40.0
 
-[connection signal="popup_open" from="alarms/Alarm" to="player" method="_on_popup_open"]
 [connection signal="popup_open" from="alarms/Alarm2" to="player" method="_on_popup_open"]
 [connection signal="popup_open" from="alarms/Alarm3" to="player" method="_on_popup_open"]
