@@ -1,5 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://bvmfcr632kxoy"]
+[gd_scene load_steps=4 format=3 uid="uid://bvmfcr632kxoy"]
 
+[ext_resource type="Script" uid="uid://ctvmj4fushyp2" path="res://scripts/explaining.gd" id="1_bn3ck"]
 [ext_resource type="FontFile" uid="uid://cykpy8xitxqbn" path="res://Assets/fonts/PixelOperator8-Bold.ttf" id="1_ep4ju"]
 [ext_resource type="Texture2D" uid="uid://dilgb5kpsc3ny" path="res://Assets/free-office-pixel-art/alarm.png" id="2_ut8do"]
 
@@ -8,6 +9,7 @@ layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
+script = ExtResource("1_bn3ck")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 0
@@ -16,6 +18,7 @@ offset_bottom = 660.0
 color = Color(0, 0, 0, 1)
 
 [node name="Label" type="Label" parent="."]
+layout_mode = 0
 offset_left = 263.0
 offset_top = 53.0
 offset_right = 611.0
@@ -26,6 +29,7 @@ theme_override_fonts/font = ExtResource("1_ep4ju")
 text = "THE ERRORS OF THE OFFICE"
 
 [node name="Label2" type="Label" parent="."]
+layout_mode = 0
 offset_left = 275.0
 offset_top = 219.0
 offset_right = 663.0
@@ -36,6 +40,7 @@ theme_override_fonts/font = ExtResource("1_ep4ju")
 text = "You are alone at the office."
 
 [node name="Label3" type="Label" parent="."]
+layout_mode = 0
 offset_left = 285.0
 offset_top = 306.0
 offset_right = 673.0
@@ -43,9 +48,10 @@ offset_bottom = 325.0
 scale = Vector2(1.76, 1.76)
 theme_override_colors/font_color = Color(1, 0.956863, 1, 1)
 theme_override_fonts/font = ExtResource("1_ep4ju")
-text = "You have to keep in intact."
+text = "You have to keep it intact."
 
 [node name="Label4" type="Label" parent="."]
+layout_mode = 0
 offset_left = 249.0
 offset_top = 389.0
 offset_right = 675.0
@@ -55,17 +61,30 @@ theme_override_colors/font_color = Color(1, 0.956863, 1, 1)
 theme_override_fonts/font = ExtResource("1_ep4ju")
 text = "Watch out for alarms, such as:"
 
+[node name="Label6" type="Label" parent="."]
+layout_mode = 0
+offset_left = 60.0
+offset_top = 465.0
+offset_right = 382.0
+offset_bottom = 481.0
+rotation = 0.270526
+scale = Vector2(1.35, 1.35)
+theme_override_colors/font_color = Color(1, 0.956863, 1, 1)
+theme_override_fonts/font = ExtResource("1_ep4ju")
+text = "Note: Interact with \"e\""
+
 [node name="Label5" type="Label" parent="."]
-offset_left = 646.0
-offset_top = 607.0
-offset_right = 1072.0
-offset_bottom = 626.0
+layout_mode = 0
+offset_left = 612.0
+offset_top = 611.0
+offset_right = 1038.0
+offset_bottom = 630.0
 scale = Vector2(1.76, 1.76)
 theme_override_colors/font_color = Color(1, 0.956863, 1, 1)
 theme_override_fonts/font = ExtResource("1_ep4ju")
 text = "Press space to continue"
 
 [node name="Alarm" type="Sprite2D" parent="."]
-position = Vector2(607, 526)
-scale = Vector2(0.54, 0.54)
+position = Vector2(603, 502)
+scale = Vector2(0.414118, 0.414118)
 texture = ExtResource("2_ut8do")

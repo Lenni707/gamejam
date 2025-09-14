@@ -4161,6 +4161,7 @@ radius = 5.0
 radius = 6.0
 
 [node name="game" type="Node2D"]
+position = Vector2(-48, 13)
 script = ExtResource("1_nnt18")
 escape_menu_scene = ExtResource("2_7nbq1")
 
@@ -4262,7 +4263,7 @@ shape = SubResource("CircleShape2D_oeip8")
 [node name="Items" type="Node" parent="."]
 
 [node name="Printer" type="Sprite2D" parent="Items"]
-position = Vector2(-74, -125)
+position = Vector2(-122, -112)
 scale = Vector2(1.3125, 1.3125)
 texture = ExtResource("2_3dryh")
 
@@ -4280,12 +4281,12 @@ texture = ExtResource("4_i6g32")
 metadata/_edit_use_anchors_ = true
 
 [node name="Printer2" type="Sprite2D" parent="Items"]
-position = Vector2(307, -129)
+position = Vector2(259, -116)
 scale = Vector2(1.3125, 1.3125)
 texture = ExtResource("2_3dryh")
 
 [node name="Desk" type="Sprite2D" parent="Items"]
-position = Vector2(-221, -118)
+position = Vector2(-269, -105)
 scale = Vector2(1.21875, 1.21875)
 texture = ExtResource("3_wowpa")
 
@@ -4298,23 +4299,23 @@ texture = ExtResource("4_i6g32")
 metadata/_edit_use_anchors_ = true
 
 [node name="Writing-table2" type="Sprite2D" parent="Items"]
-position = Vector2(179, 89)
+position = Vector2(131, 102)
 texture = ExtResource("5_rku1e")
 
 [node name="Cabnites" type="Node" parent="."]
 
 [node name="Cabinet" type="Sprite2D" parent="Cabnites"]
-position = Vector2(185, -128)
+position = Vector2(137, -115)
 scale = Vector2(1.29688, 1.29688)
 texture = ExtResource("6_rfjv2")
 
 [node name="Cabinet2" type="Sprite2D" parent="Cabnites"]
-position = Vector2(222, -128)
+position = Vector2(174, -115)
 scale = Vector2(1.29688, 1.29688)
 texture = ExtResource("6_rfjv2")
 
 [node name="Cabinet3" type="Sprite2D" parent="Cabnites"]
-position = Vector2(216, 74)
+position = Vector2(168, 87)
 scale = Vector2(1.29688, 1.29688)
 texture = ExtResource("6_rfjv2")
 
@@ -4342,80 +4343,80 @@ texture = ExtResource("11_85qyi")
 [node name="office_trenner" type="Node" parent="."]
 
 [node name="Office-partitions-1" type="Sprite2D" parent="office_trenner"]
-position = Vector2(-224, 19)
+position = Vector2(-272, 32)
 texture = ExtResource("12_iivbl")
 
 [node name="Office-partitions-5" type="Sprite2D" parent="office_trenner"]
-position = Vector2(-224, 114)
+position = Vector2(-272, 127)
 texture = ExtResource("12_iivbl")
 
 [node name="Office-partitions-6" type="Sprite2D" parent="office_trenner"]
-position = Vector2(-162, 114)
+position = Vector2(-210, 127)
 texture = ExtResource("12_iivbl")
 
 [node name="Office-partitions-7" type="Sprite2D" parent="office_trenner"]
-position = Vector2(-99, 114)
+position = Vector2(-147, 127)
 texture = ExtResource("12_iivbl")
 
 [node name="Office-partitions-8" type="Sprite2D" parent="office_trenner"]
-position = Vector2(-36, 114)
+position = Vector2(-84, 127)
 texture = ExtResource("12_iivbl")
 
 [node name="Office-partitions-2" type="Sprite2D" parent="office_trenner"]
-position = Vector2(-160, 19)
+position = Vector2(-208, 32)
 texture = ExtResource("12_iivbl")
 
 [node name="Office-partitions-3" type="Sprite2D" parent="office_trenner"]
-position = Vector2(-96, 19)
+position = Vector2(-144, 32)
 texture = ExtResource("12_iivbl")
 
 [node name="Office-partitions-4" type="Sprite2D" parent="office_trenner"]
-position = Vector2(-33, 19)
+position = Vector2(-81, 32)
 texture = ExtResource("12_iivbl")
 
 [node name="desks" type="Node" parent="."]
 
 [node name="Desk-with-pc" type="Sprite2D" parent="desks"]
-position = Vector2(-224, 29)
+position = Vector2(-272, 42)
 scale = Vector2(1.15625, 1.15625)
 texture = ExtResource("10_ewbju")
 
 [node name="Desk-with-pc2" type="Sprite2D" parent="desks"]
-position = Vector2(-34, 28)
+position = Vector2(-82, 41)
 scale = Vector2(1.15625, 1.15625)
 texture = ExtResource("10_ewbju")
 
 [node name="Desk-with-pc3" type="Sprite2D" parent="desks"]
-position = Vector2(-99, 29)
+position = Vector2(-147, 42)
 scale = Vector2(1.15625, 1.15625)
 texture = ExtResource("10_ewbju")
 
 [node name="Desk-with-pc4" type="Sprite2D" parent="desks"]
-position = Vector2(-166, 29)
+position = Vector2(-214, 42)
 scale = Vector2(1.15625, 1.15625)
 texture = ExtResource("10_ewbju")
 
 [node name="Desk-with-pc5" type="Sprite2D" parent="desks"]
 z_index = 1
-position = Vector2(-102, 123)
+position = Vector2(-150, 136)
 scale = Vector2(1.215, 1.215)
 texture = ExtResource("10_ewbju")
 
 [node name="Desk-with-pc6" type="Sprite2D" parent="desks"]
 z_index = 1
-position = Vector2(-41, 123)
+position = Vector2(-89, 136)
 scale = Vector2(1.215, 1.215)
 texture = ExtResource("10_ewbju")
 
 [node name="Desk-with-pc7" type="Sprite2D" parent="desks"]
 z_index = 1
-position = Vector2(-226, 123)
+position = Vector2(-274, 136)
 scale = Vector2(1.215, 1.215)
 texture = ExtResource("10_ewbju")
 
 [node name="Desk-with-pc8" type="Sprite2D" parent="desks"]
 z_index = 1
-position = Vector2(-162, 124)
+position = Vector2(-210, 137)
 scale = Vector2(1.215, 1.215)
 texture = ExtResource("10_ewbju")
 
@@ -4423,25 +4424,25 @@ texture = ExtResource("10_ewbju")
 
 [node name="Chair" type="Sprite2D" parent="Chairs"]
 z_index = 2
-position = Vector2(-227, 43)
+position = Vector2(-275, 56)
 scale = Vector2(1.26, 1.26)
 texture = ExtResource("14_1phco")
 
 [node name="Chair4" type="Sprite2D" parent="Chairs"]
 z_index = 2
-position = Vector2(-227, 138)
+position = Vector2(-275, 151)
 scale = Vector2(1.26, 1.26)
 texture = ExtResource("14_1phco")
 
 [node name="Chair2" type="Sprite2D" parent="Chairs"]
 z_index = 2
-position = Vector2(-41, 41)
+position = Vector2(-89, 54)
 scale = Vector2(1.26, 1.26)
 texture = ExtResource("14_1phco")
 
 [node name="Chair3" type="Sprite2D" parent="Chairs"]
 z_index = 2
-position = Vector2(-110, 135)
+position = Vector2(-158, 148)
 scale = Vector2(1.26, 1.26)
 texture = ExtResource("14_1phco")
 
@@ -4451,70 +4452,77 @@ position = Vector2(4, -61)
 scale = Vector2(0.471446, 0.471446)
 
 [node name="Camera2D" type="Camera2D" parent="player"]
-rotation = -0.0234571
-scale = Vector2(-0.338931, 1.29611)
-zoom = Vector2(1.49, 1.49)
+rotation = 3.14159
+scale = Vector2(0.338931, -1.29611)
+zoom = Vector2(1.67, 1.67)
+limit_left = -450
+limit_top = -320
+limit_right = 450
+limit_bottom = 320
+limit_smoothed = true
+position_smoothing_enabled = true
+position_smoothing_speed = 10.17
 
 [node name="alarms" type="Node" parent="."]
 
 [node name="Computer1" parent="alarms" instance=ExtResource("15_nb51f")]
-position = Vector2(-209, 15)
+position = Vector2(-257, 28)
 game_scenes = Array[PackedScene]([ExtResource("19_iivbl"), ExtResource("20_7nbq1"), ExtResource("20_exi56")])
 
 [node name="Computer2" parent="alarms" instance=ExtResource("15_nb51f")]
-position = Vector2(-151, 15)
+position = Vector2(-199, 28)
 game_scenes = Array[PackedScene]([ExtResource("19_iivbl"), ExtResource("20_7nbq1"), ExtResource("20_exi56")])
 
 [node name="Computer4" parent="alarms" instance=ExtResource("15_nb51f")]
-position = Vector2(-78, 15)
+position = Vector2(-126, 28)
 game_scenes = Array[PackedScene]([ExtResource("19_iivbl"), ExtResource("20_7nbq1"), ExtResource("20_exi56")])
 
 [node name="Computer5" parent="alarms" instance=ExtResource("15_nb51f")]
-position = Vector2(-16, 15)
+position = Vector2(-64, 28)
 game_scenes = Array[PackedScene]([ExtResource("19_iivbl"), ExtResource("20_7nbq1"), ExtResource("20_exi56")])
 
 [node name="Computer6" parent="alarms" instance=ExtResource("15_nb51f")]
-position = Vector2(329, 81)
+position = Vector2(281, 94)
 game_scenes = Array[PackedScene]([ExtResource("19_iivbl"), ExtResource("20_7nbq1"), ExtResource("20_exi56")])
 
 [node name="Computer7" parent="alarms" instance=ExtResource("15_nb51f")]
-position = Vector2(-207, 111)
+position = Vector2(-255, 124)
 game_scenes = Array[PackedScene]([ExtResource("19_iivbl"), ExtResource("20_7nbq1"), ExtResource("20_exi56")])
 
 [node name="Computer8" parent="alarms" instance=ExtResource("15_nb51f")]
-position = Vector2(-143, 111)
+position = Vector2(-191, 124)
 game_scenes = Array[PackedScene]([ExtResource("19_iivbl"), ExtResource("20_7nbq1"), ExtResource("20_exi56")])
 
 [node name="Computer9" parent="alarms" instance=ExtResource("15_nb51f")]
-position = Vector2(-83, 111)
+position = Vector2(-131, 124)
 game_scenes = Array[PackedScene]([ExtResource("19_iivbl"), ExtResource("20_7nbq1"), ExtResource("20_exi56")])
 
 [node name="Computer10" parent="alarms" instance=ExtResource("15_nb51f")]
-position = Vector2(-21, 111)
+position = Vector2(-69, 124)
 game_scenes = Array[PackedScene]([ExtResource("19_iivbl"), ExtResource("20_7nbq1"), ExtResource("20_exi56")])
 
 [node name="Computer11" parent="alarms" instance=ExtResource("15_nb51f")]
-position = Vector2(-207, -138)
+position = Vector2(-255, -125)
 game_scenes = Array[PackedScene]([ExtResource("19_iivbl"), ExtResource("20_7nbq1"), ExtResource("20_exi56")])
 
 [node name="Computer12" parent="alarms" instance=ExtResource("15_nb51f")]
-position = Vector2(-146, -139)
+position = Vector2(-194, -126)
 game_scenes = Array[PackedScene]([ExtResource("19_iivbl"), ExtResource("20_7nbq1"), ExtResource("20_exi56")])
 
 [node name="Printer1" parent="alarms" instance=ExtResource("15_nb51f")]
-position = Vector2(-88, -138)
+position = Vector2(-136, -125)
 game_scenes = Array[PackedScene]([ExtResource("22_7t8sx")])
 
 [node name="Printer3" parent="alarms" instance=ExtResource("15_nb51f")]
-position = Vector2(296, -142)
+position = Vector2(248, -129)
 game_scenes = Array[PackedScene]([ExtResource("22_7t8sx")])
 
 [node name="Printer4" parent="alarms" instance=ExtResource("15_nb51f")]
-position = Vector2(341, -143)
+position = Vector2(293, -130)
 game_scenes = Array[PackedScene]([ExtResource("22_7t8sx")])
 
 [node name="Printer2" parent="alarms" instance=ExtResource("15_nb51f")]
-position = Vector2(-36, -140)
+position = Vector2(-84, -127)
 game_scenes = Array[PackedScene]([ExtResource("22_7t8sx")])
 
 [node name="UI" type="CanvasLayer" parent="."]
@@ -4541,5 +4549,6 @@ offset_right = -101.0
 offset_bottom = -8.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("23_mg4q0")
+metadata/_edit_use_anchors_ = true
 
 [connection signal="timeout" from="CheckTimer" to="." method="_on_check_timer_timeout"]
