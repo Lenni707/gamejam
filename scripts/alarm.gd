@@ -27,9 +27,9 @@ func trigger_alarm():
 
 func stop_alarm():
 	print("[Alarm:", name, "] stop_alarm called. active=", active)
-	if active:
-		active = false
-		sprite.visible = false
+	
+	active = false
+	sprite.visible = false
 
 func _on_body_entered(body):
 	if body.is_in_group("player"):
