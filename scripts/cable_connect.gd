@@ -20,9 +20,9 @@ func _ready() -> void:
 	add_picture("res://Assets/cable_game/HDMI-Text.png", 150.0, 227.0, 0.42, 0.42, "HDMI-TEXT")
 	add_picture("res://Assets/cable_game/LAN-TEXT.png", 280.0, 235.0, 0.39, 0.39,  "LAN-TEXT")
 	
-	add_picture("res://Assets/cable_game/USB-A-PORT.png", 200.0, 10.0, 1.5, 1.5, "USB-A-PORT")
+	add_picture("res://Assets/cable_game/USB-A-PORT.png", 200.0, 50.0, 1.5, 1.5, "USB-A-PORT")
 	add_picture("res://Assets/cable_game/HDMI-PORT.png", 10.0, 75.0, 1.5, 1.5, "HDMI-PORT")
-	add_picture("res://Assets/cable_game/LAN-CABLE-PORT.png", 300., 100., 1.5, 1.5, "LAN-PORT")
+	add_picture("res://Assets/cable_game/LAN-CABLE-PORT.png", 300., 130., 1.5, 1.5, "LAN-PORT")
 	
 func start(config := {}):
 	# init state from config if needed
