@@ -31,14 +31,12 @@ func _process(delta: float) -> void:
 func _update_animation(dir: Vector2) -> void:
 	if ui_locked:
 		return   # skip movement entirely
-	
 	if dir == Vector2.ZERO:
 		# Idle when no input
 		if anim.animation != "idle":
 			anim.play("idle")
 	else:
 		# Runninges
-		
 		# Flip when moving left
 		if dir.x < -0.01 && not dir.y < -0.01:
 			anim.play("run")
