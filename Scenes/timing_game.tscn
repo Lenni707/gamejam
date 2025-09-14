@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://na7xdq1mxmin"]
 
-[ext_resource type="Script" uid="uid://dx1hmsr7emit3" path="res://scripts/spam_game.gd" id="1_tpvkr"]
+[ext_resource type="Script" uid="uid://dx1hmsr7emit3" path="res://scripts/timing_game.gd" id="1_tpvkr"]
 [ext_resource type="Texture2D" uid="uid://bh2fwpg2h8lf5" path="res://Assets/timing_game/bg_keys.png" id="2_g73hy"]
 [ext_resource type="Texture2D" uid="uid://fgge63xietuy" path="res://Assets/timing_game/frame_keys.png" id="3_shfu1"]
 [ext_resource type="FontFile" uid="uid://cdvtpcgguj3k3" path="res://Assets/fonts/PixelOperator8.ttf" id="4_g73hy"]
