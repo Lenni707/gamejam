@@ -1,6 +1,8 @@
 extends Node2D
 
 @onready var counter: Label = $Counter
+@onready var stopclock: Label = $Stopclock
+
 
 #Alarm control
 var alarms = {}
@@ -29,7 +31,10 @@ func _ready() -> void:
 		#trigger_problem(i)
 
 func _process(delta: float) -> void:
-	counter.text = "Active errors: " + str(get_ative_alarms().size()) + "/7"
+	counter.text = "Active errors: " + str(get_active_alarms().size()) + "/7"
+	if get_active_alarms().size() >= 7:
+		GameState.last_time = stopclock.text
+		get_tree().change_scene_to_file("res://Scenes/death_screen.tscn")
 		
 func trigger_problem(name):
 	if name in alarms:
@@ -42,7 +47,7 @@ func get_free_alarms():
 			free_alarms.append(alarm)
 	return free_alarms
 	
-func get_ative_alarms():
+func get_active_alarms():
 	var free_alarms = []
 	for alarm in alarms.values():
 		if alarm.active:
@@ -57,10 +62,10 @@ func trigger_random_alarm_if_free():
 		choosen.trigger_alarm()
 
 
-@export var check_interval: float = 5.0
-@export var base_prob: float = 0.05
-@export var grow_rate: float = 0.001
-@export var max_prob: float = 0.3
+@export var check_interval: float = 3.0
+@export var base_prob: float = 0.2
+@export var grow_rate: float = 0.009
+@export var max_prob: float = 1.0
 
 var elapsed_time := 0.0
 
@@ -72,7 +77,7 @@ func _on_check_timer_timeout() -> void:
 
 	var  p = min(base_prob + grow_rate * elapsed_time, max_prob)
 	print(p)
-	if randf() > p:
+	if randf() < p:
 		trigger_random_alarm_if_free()
 
 # Escape menu
@@ -101,3 +106,7 @@ var paused := false
 	#paused = false
 	## Spiel startet
 	#get_tree().paused = false
+
+
+func _on_time(time: String) -> void:
+	pass # Replace with function body.

@@ -1,4 +1,4 @@
-[gd_scene load_steps=44 format=3 uid="uid://wflja766b8ma"]
+[gd_scene load_steps=45 format=3 uid="uid://wflja766b8ma"]
 
 [ext_resource type="Texture2D" uid="uid://dj0eqqayghy5i" path="res://Assets/get_ground.png" id="1_ebmjs"]
 [ext_resource type="Script" uid="uid://bhajgj8lq0ldn" path="res://scripts/game.gd" id="1_nnt18"]
@@ -24,6 +24,7 @@
 [ext_resource type="PackedScene" uid="uid://bstkxj02q2rhq" path="res://Scenes/printer_paper_noo.tscn" id="22_7t8sx"]
 [ext_resource type="FontFile" uid="uid://cykpy8xitxqbn" path="res://Assets/fonts/PixelOperator8-Bold.ttf" id="23_mg4q0"]
 [ext_resource type="Script" uid="uid://cynkuu5swy6sk" path="res://scripts/stopclock.gd" id="24_vm72l"]
+[ext_resource type="AudioStream" uid="uid://dkjpnofwnx5r0" path="res://Sound/best-game-console-301284.mp3" id="25_22asu"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qxrlw"]
 texture = ExtResource("1_ebmjs")
@@ -4553,5 +4554,11 @@ scale = Vector2(0.705, 0.705)
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("23_mg4q0")
 script = ExtResource("24_vm72l")
+
+[node name="Music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("25_22asu")
+volume_db = -30.919
+autoplay = true
+parameters/looping = true
 
 [connection signal="timeout" from="CheckTimer" to="." method="_on_check_timer_timeout"]
