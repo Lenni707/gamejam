@@ -69,6 +69,7 @@ _data = {
 }
 
 [node name="Alarm" type="Node2D"]
+z_index = 200
 script = ExtResource("1_ck6sr")
 
 [node name="Area2D" type="Area2D" parent="."]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=41 format=3 uid="uid://wflja766b8ma"]
+[gd_scene load_steps=42 format=3 uid="uid://wflja766b8ma"]
 
 [ext_resource type="Texture2D" uid="uid://dj0eqqayghy5i" path="res://Assets/get_ground.png" id="1_ebmjs"]
 [ext_resource type="Script" uid="uid://bhajgj8lq0ldn" path="res://scripts/game.gd" id="1_nnt18"]
@@ -21,6 +21,7 @@
 [ext_resource type="PackedScene" uid="uid://cl2qe45x22153" path="res://Scenes/cable_connect.tscn" id="19_iivbl"]
 [ext_resource type="PackedScene" uid="uid://clqiursun1ihv" path="res://Scenes/hahaha_2_uhr_30.tscn" id="20_7nbq1"]
 [ext_resource type="PackedScene" uid="uid://na7xdq1mxmin" path="res://Scenes/timing_game.tscn" id="20_exi56"]
+[ext_resource type="PackedScene" uid="uid://bstkxj02q2rhq" path="res://Scenes/printer_paper_noo.tscn" id="22_7t8sx"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qxrlw"]
 texture = ExtResource("1_ebmjs")
@@ -4145,7 +4146,7 @@ size = Vector2(192.5, 20)
 size = Vector2(253, 52)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cwurv"]
-size = Vector2(67, 22)
+size = Vector2(108, 22)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mucmn"]
 size = Vector2(52, 22)
@@ -4238,7 +4239,7 @@ position = Vector2(-130.5, 113)
 shape = SubResource("RectangleShape2D_81klo")
 
 [node name="CollisionShape2D6" type="CollisionShape2D" parent="TileMap/Items"]
-position = Vector2(195.5, 79)
+position = Vector2(216, 79)
 shape = SubResource("RectangleShape2D_cwurv")
 
 [node name="CollisionShape2D7" type="CollisionShape2D" parent="TileMap/Items"]
@@ -4277,6 +4278,11 @@ offset_bottom = 8.82051
 texture = ExtResource("4_i6g32")
 metadata/_edit_use_anchors_ = true
 
+[node name="Printer2" type="Sprite2D" parent="Items"]
+position = Vector2(307, -129)
+scale = Vector2(1.3125, 1.3125)
+texture = ExtResource("2_3dryh")
+
 [node name="Desk" type="Sprite2D" parent="Items"]
 position = Vector2(-221, -118)
 scale = Vector2(1.21875, 1.21875)
@@ -4289,10 +4295,6 @@ offset_right = 20.3077
 offset_bottom = 8.82051
 texture = ExtResource("4_i6g32")
 metadata/_edit_use_anchors_ = true
-
-[node name="Writing-table" type="Sprite2D" parent="Items"]
-position = Vector2(323, -118)
-texture = ExtResource("5_rku1e")
 
 [node name="Writing-table2" type="Sprite2D" parent="Items"]
 position = Vector2(179, 89)
@@ -4315,10 +4317,6 @@ position = Vector2(216, 74)
 scale = Vector2(1.29688, 1.29688)
 texture = ExtResource("6_rfjv2")
 
-[node name="Plant" type="Sprite2D" parent="."]
-position = Vector2(292, -129)
-texture = ExtResource("7_1phco")
-
 [node name="Plant2" type="Sprite2D" parent="."]
 position = Vector2(175, 155)
 texture = ExtResource("7_1phco")
@@ -4336,7 +4334,7 @@ position = Vector2(-38, 115)
 texture = ExtResource("4_i6g32")
 
 [node name="Sink" type="Sprite2D" parent="."]
-position = Vector2(261, -126)
+position = Vector2(251, 77)
 scale = Vector2(1.17188, 1.17188)
 texture = ExtResource("11_85qyi")
 
@@ -4459,12 +4457,64 @@ zoom = Vector2(1.49, 1.49)
 [node name="alarms" type="Node" parent="."]
 
 [node name="Computer1" parent="alarms" instance=ExtResource("15_nb51f")]
-position = Vector2(62, -40)
-game_scenes = Array[PackedScene]([ExtResource("19_iivbl"), ExtResource("20_7nbq1")])
+position = Vector2(-209, 15)
+game_scenes = Array[PackedScene]([ExtResource("19_iivbl"), ExtResource("20_7nbq1"), ExtResource("20_exi56")])
 
-[node name="Alarm" parent="alarms" instance=ExtResource("15_nb51f")]
-position = Vector2(-211, -150)
-game_scenes = Array[PackedScene]([ExtResource("20_exi56")])
+[node name="Computer2" parent="alarms" instance=ExtResource("15_nb51f")]
+position = Vector2(-151, 15)
+game_scenes = Array[PackedScene]([ExtResource("19_iivbl"), ExtResource("20_7nbq1"), ExtResource("20_exi56")])
+
+[node name="Computer4" parent="alarms" instance=ExtResource("15_nb51f")]
+position = Vector2(-78, 15)
+game_scenes = Array[PackedScene]([ExtResource("19_iivbl"), ExtResource("20_7nbq1"), ExtResource("20_exi56")])
+
+[node name="Computer5" parent="alarms" instance=ExtResource("15_nb51f")]
+position = Vector2(-16, 15)
+game_scenes = Array[PackedScene]([ExtResource("19_iivbl"), ExtResource("20_7nbq1"), ExtResource("20_exi56")])
+
+[node name="Computer6" parent="alarms" instance=ExtResource("15_nb51f")]
+position = Vector2(329, 81)
+game_scenes = Array[PackedScene]([ExtResource("19_iivbl"), ExtResource("20_7nbq1"), ExtResource("20_exi56")])
+
+[node name="Computer7" parent="alarms" instance=ExtResource("15_nb51f")]
+position = Vector2(-207, 111)
+game_scenes = Array[PackedScene]([ExtResource("19_iivbl"), ExtResource("20_7nbq1"), ExtResource("20_exi56")])
+
+[node name="Computer8" parent="alarms" instance=ExtResource("15_nb51f")]
+position = Vector2(-143, 111)
+game_scenes = Array[PackedScene]([ExtResource("19_iivbl"), ExtResource("20_7nbq1"), ExtResource("20_exi56")])
+
+[node name="Computer9" parent="alarms" instance=ExtResource("15_nb51f")]
+position = Vector2(-83, 111)
+game_scenes = Array[PackedScene]([ExtResource("19_iivbl"), ExtResource("20_7nbq1"), ExtResource("20_exi56")])
+
+[node name="Computer10" parent="alarms" instance=ExtResource("15_nb51f")]
+position = Vector2(-21, 111)
+game_scenes = Array[PackedScene]([ExtResource("19_iivbl"), ExtResource("20_7nbq1"), ExtResource("20_exi56")])
+
+[node name="Computer11" parent="alarms" instance=ExtResource("15_nb51f")]
+position = Vector2(-207, -138)
+game_scenes = Array[PackedScene]([ExtResource("19_iivbl"), ExtResource("20_7nbq1"), ExtResource("20_exi56")])
+
+[node name="Computer12" parent="alarms" instance=ExtResource("15_nb51f")]
+position = Vector2(-146, -139)
+game_scenes = Array[PackedScene]([ExtResource("19_iivbl"), ExtResource("20_7nbq1"), ExtResource("20_exi56")])
+
+[node name="Printer1" parent="alarms" instance=ExtResource("15_nb51f")]
+position = Vector2(-88, -138)
+game_scenes = Array[PackedScene]([ExtResource("22_7t8sx")])
+
+[node name="Printer3" parent="alarms" instance=ExtResource("15_nb51f")]
+position = Vector2(296, -142)
+game_scenes = Array[PackedScene]([ExtResource("22_7t8sx")])
+
+[node name="Printer4" parent="alarms" instance=ExtResource("15_nb51f")]
+position = Vector2(341, -143)
+game_scenes = Array[PackedScene]([ExtResource("22_7t8sx")])
+
+[node name="Printer2" parent="alarms" instance=ExtResource("15_nb51f")]
+position = Vector2(-36, -140)
+game_scenes = Array[PackedScene]([ExtResource("22_7t8sx")])
 
 [node name="UI" type="CanvasLayer" parent="."]
 
