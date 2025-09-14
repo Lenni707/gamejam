@@ -1,4 +1,4 @@
-[gd_scene load_steps=43 format=3 uid="uid://wflja766b8ma"]
+[gd_scene load_steps=44 format=3 uid="uid://wflja766b8ma"]
 
 [ext_resource type="Texture2D" uid="uid://dj0eqqayghy5i" path="res://Assets/get_ground.png" id="1_ebmjs"]
 [ext_resource type="Script" uid="uid://bhajgj8lq0ldn" path="res://scripts/game.gd" id="1_nnt18"]
@@ -23,6 +23,7 @@
 [ext_resource type="PackedScene" uid="uid://na7xdq1mxmin" path="res://Scenes/timing_game.tscn" id="20_exi56"]
 [ext_resource type="PackedScene" uid="uid://bstkxj02q2rhq" path="res://Scenes/printer_paper_noo.tscn" id="22_7t8sx"]
 [ext_resource type="FontFile" uid="uid://cykpy8xitxqbn" path="res://Assets/fonts/PixelOperator8-Bold.ttf" id="23_mg4q0"]
+[ext_resource type="Script" uid="uid://cynkuu5swy6sk" path="res://scripts/stopclock.gd" id="24_vm72l"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qxrlw"]
 texture = ExtResource("1_ebmjs")
@@ -4542,5 +4543,15 @@ offset_bottom = -8.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("23_mg4q0")
 metadata/_edit_use_anchors_ = true
+
+[node name="Stopclock" type="Label" parent="."]
+offset_left = -26.0
+offset_top = -179.0
+offset_right = 14.0
+offset_bottom = -156.0
+scale = Vector2(0.705, 0.705)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("23_mg4q0")
+script = ExtResource("24_vm72l")
 
 [connection signal="timeout" from="CheckTimer" to="." method="_on_check_timer_timeout"]
