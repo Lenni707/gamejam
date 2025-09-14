@@ -54,6 +54,9 @@ func _on_item_clicked(item: TextureButton):
 			print("richtig:", first_selected.name, "+", item.name)
 			first_selected.modulate = Color(0, 1, 0)
 			item.modulate = Color(0, 1, 0)
+			# Buttens deaktiviern
+			first_selected.disabled = true
+			item.disabled = true
 		else:
 			print("falsch")
 			first_selected.modulate = Color(1, 1, 1)  # Reset Farbe

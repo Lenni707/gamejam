@@ -13,8 +13,8 @@ func _ready() -> void:
 		"Computer3": $alarms/Alarm3
 	}
 
-	#for i in alarms.keys():
-		#trigger_problem(i)
+	for i in alarms.keys():
+		trigger_problem(i)
 func trigger_problem(name):
 	if name in alarms:
 		alarms[name].trigger_alarm()
