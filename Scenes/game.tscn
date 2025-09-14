@@ -4454,11 +4454,11 @@ scale = Vector2(0.471446, 0.471446)
 [node name="Camera2D" type="Camera2D" parent="player"]
 rotation = 3.14159
 scale = Vector2(0.338931, -1.29611)
-zoom = Vector2(1.67, 1.67)
+zoom = Vector2(1.53, 1.53)
 limit_left = -450
-limit_top = -320
+limit_top = -280
 limit_right = 450
-limit_bottom = 320
+limit_bottom = 280
 limit_smoothed = true
 position_smoothing_enabled = true
 position_smoothing_speed = 10.17
@@ -4473,10 +4473,6 @@ game_scenes = Array[PackedScene]([ExtResource("19_iivbl"), ExtResource("20_7nbq1
 position = Vector2(-199, 28)
 game_scenes = Array[PackedScene]([ExtResource("19_iivbl"), ExtResource("20_7nbq1"), ExtResource("20_exi56")])
 
-[node name="Computer4" parent="alarms" instance=ExtResource("15_nb51f")]
-position = Vector2(-126, 28)
-game_scenes = Array[PackedScene]([ExtResource("19_iivbl"), ExtResource("20_7nbq1"), ExtResource("20_exi56")])
-
 [node name="Computer5" parent="alarms" instance=ExtResource("15_nb51f")]
 position = Vector2(-64, 28)
 game_scenes = Array[PackedScene]([ExtResource("19_iivbl"), ExtResource("20_7nbq1"), ExtResource("20_exi56")])
@@ -4487,10 +4483,6 @@ game_scenes = Array[PackedScene]([ExtResource("19_iivbl"), ExtResource("20_7nbq1
 
 [node name="Computer7" parent="alarms" instance=ExtResource("15_nb51f")]
 position = Vector2(-255, 124)
-game_scenes = Array[PackedScene]([ExtResource("19_iivbl"), ExtResource("20_7nbq1"), ExtResource("20_exi56")])
-
-[node name="Computer8" parent="alarms" instance=ExtResource("15_nb51f")]
-position = Vector2(-191, 124)
 game_scenes = Array[PackedScene]([ExtResource("19_iivbl"), ExtResource("20_7nbq1"), ExtResource("20_exi56")])
 
 [node name="Computer9" parent="alarms" instance=ExtResource("15_nb51f")]

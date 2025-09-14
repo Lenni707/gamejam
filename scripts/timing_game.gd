@@ -1,7 +1,7 @@
 extends Control
 signal finished(success: bool)
 
-var spawn_interval := 1.2
+var spawn_interval := 0.7
 var note_speed := 300.0
 var note_size := Vector2(16, 16)
 
@@ -66,10 +66,10 @@ func _spawn_note() -> void:
 	timer.start()
 
 func _process(delta: float) -> void:
-	label.text = str(counter) + "/10"
+	label.text = str(counter) + "/7"
 	if counter < 0:
 		counter = 0
-	if counter == 10:
+	if counter == 7:
 		emit_signal("finished", true)
 	for n in notes_root.get_children():
 		if n is Control:

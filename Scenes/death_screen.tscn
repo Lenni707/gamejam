@@ -1,0 +1,77 @@
+[gd_scene load_steps=3 format=3 uid="uid://d1nevuhfsbomg"]
+
+[ext_resource type="FontFile" uid="uid://cykpy8xitxqbn" path="res://Assets/fonts/PixelOperator8-Bold.ttf" id="1_8hps1"]
+[ext_resource type="Script" uid="uid://b7jajob6jqb3j" path="res://scripts/death_screen.gd" id="1_rwas2"]
+
+[node name="death_screen" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_rwas2")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 1269.0
+offset_bottom = 665.0
+color = Color(0, 0, 0, 1)
+
+[node name="Label" type="Label" parent="."]
+offset_left = 226.0
+offset_top = 175.0
+offset_right = 622.0
+offset_bottom = 194.0
+scale = Vector2(2.015, 2.015)
+theme_override_colors/font_color = Color(1, 0.956863, 1, 1)
+theme_override_fonts/font = ExtResource("1_8hps1")
+text = "You couldnt save the office."
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 260.0
+offset_top = 238.0
+offset_right = 656.0
+offset_bottom = 257.0
+scale = Vector2(2.015, 2.015)
+theme_override_colors/font_color = Color(1, 0.956863, 1, 1)
+theme_override_fonts/font = ExtResource("1_8hps1")
+text = "But still kept it going for:"
+
+[node name="Label3" type="Label" parent="."]
+offset_left = 485.0
+offset_top = 304.0
+offset_right = 881.0
+offset_bottom = 323.0
+scale = Vector2(2.015, 2.015)
+theme_override_colors/font_color = Color(1, 0.956863, 1, 1)
+theme_override_fonts/font = ExtResource("1_8hps1")
+text = "xx.min"
+
+[node name="Label4" type="Label" parent="."]
+offset_left = 356.0
+offset_top = 402.0
+offset_right = 752.0
+offset_bottom = 421.0
+scale = Vector2(2.015, 2.015)
+theme_override_colors/font_color = Color(1, 0.956863, 1, 1)
+theme_override_fonts/font = ExtResource("1_8hps1")
+text = "thats impressive..."
+
+[node name="Label5" type="Label" parent="."]
+offset_left = 499.0
+offset_top = 458.0
+offset_right = 599.0
+offset_bottom = 477.0
+scale = Vector2(2.015, 2.015)
+theme_override_colors/font_color = Color(1, 0.956863, 1, 1)
+theme_override_fonts/font = ExtResource("1_8hps1")
+text = "i guess"
+
+[node name="Label6" type="Label" parent="."]
+offset_left = 601.0
+offset_top = 605.0
+offset_right = 945.0
+offset_bottom = 624.0
+scale = Vector2(1.74, 1.74)
+theme_override_colors/font_color = Color(1, 0.956863, 1, 1)
+theme_override_fonts/font = ExtResource("1_8hps1")
+text = "Press space to try again"
