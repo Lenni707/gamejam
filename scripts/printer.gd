@@ -1,5 +1,6 @@
 extends Area2D
-signal finished(success: bool)
+signal game_end(success: bool)
+
 
 func _ready() -> void:
 	connect("area_entered", Callable(self, "_"))
@@ -14,6 +15,8 @@ func _on_area_exited(area: Area2D):
 	print("Objekt rausgegangen! Aktuell im Ziel:", counter)
 	
 func _process(delta: float) -> void:
-	if counter == 5:
-		print("finished")
-		emit_signal("finished", true)
+	if counter >= 5:
+		emit_signal("game_end", true)
+
+
+	
