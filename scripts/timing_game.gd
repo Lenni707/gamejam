@@ -2,7 +2,7 @@ extends Control
 signal finished(success: bool)
 
 var spawn_interval := 0.7
-var note_speed := 400.0
+var note_speed := 350.0
 var note_size := Vector2(16, 16)
 
 var tex_up    := preload("res://Assets/timing_game/key_up.png")
