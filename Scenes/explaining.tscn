@@ -9,12 +9,14 @@ layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
+scale = Vector2(0.94494, 0.969516)
 script = ExtResource("1_bn3ck")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 0
 offset_right = 1723.0
 offset_bottom = 660.0
+scale = Vector2(0.879853, 1.04411)
 color = Color(0, 0, 0, 1)
 
 [node name="Label" type="Label" parent="."]
