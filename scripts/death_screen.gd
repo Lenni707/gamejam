@@ -15,7 +15,7 @@ func _process(delta: float) -> void:
 	
 
 func send_data() -> void:
-	var url := "www.okoloki.com/api/save_scores"
+	var url := "www.okoloki.com/save_scores"
 	var headers := ["Content-Type: application/json"]
 	var body := {"result": GameState.last_time}
 	var json := JSON.stringify(body)
